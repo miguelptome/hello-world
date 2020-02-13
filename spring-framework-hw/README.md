@@ -2,12 +2,12 @@
 
 Hello World with Spring Framework.
 
-## Uses:
+## Tools:
 * Maven 
 * java 1.8
 * Spring Framework 5.1.13.RELEASE
-..* spring-core
-..* spring-context
+	* spring-core
+	* spring-context
 
 ## Description
 Start the context and load the definitions from xml context configuration.
