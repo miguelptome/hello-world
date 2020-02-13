@@ -1,9 +1,9 @@
-package pt.segsocial;
+package pt.helloworld;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pt.segsocial.services.HelloWorldService;
+import pt.helloworld.services.HelloWorldService;
 
 public class Hello {
     

@@ -1,4 +1,4 @@
-package pt.segsocial.services;
+package pt.helloworld.services;
 
 import org.springframework.stereotype.Service;
 
