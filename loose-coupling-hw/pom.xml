@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+  	
+  	<groupId>pt.helloworld</groupId>
+  	<artifactId>loose-coupling-hw</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<packaging>jar</packaging>
+  	
+  	<name>Loose Coupling HW</name>
+  	<description>Loose Coupling - Hello World</description>
+  	
+  	<inceptionYear>2020</inceptionYear>
+  	
+  	<properties>
+  	
+  		<project.build.sourceEncoding>ISO-8859-15</project.build.sourceEncoding>
+  		<javac.source.level>1.8</javac.source.level>
+        <javac.target.level>1.8</javac.target.level>
+  	
+  		<!-- Spring Framework properties -->
+  		<spring.version>5.1.13.RELEASE</spring.version>
+  		
+  	</properties>
+  	
+  	<modules></modules>
+  	
+ 	<dependencies></dependencies>
+  	
+  	<build>
+  		<pluginManagement>
+  			<plugins></plugins>
+  		</pluginManagement>
+  	</build>
+  	
+  	<profiles></profiles>
+</project>
