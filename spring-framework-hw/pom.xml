@@ -5,7 +5,7 @@
 	
 	<modelVersion>4.0.0</modelVersion>
   	
-  	<groupId>pt.mtome</groupId>
+  	<groupId>pt.hello-world</groupId>
   	<artifactId>spring-framework-hw</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   	<packaging>jar</packaging>
@@ -16,19 +16,33 @@
   	<inceptionYear>2020</inceptionYear>
   	
   	<properties>
+  	
   		<project.build.sourceEncoding>ISO-8859-15</project.build.sourceEncoding>
   		<javac.source.level>1.8</javac.source.level>
         <javac.target.level>1.8</javac.target.level>
   	
   		<!-- Spring Framework properties -->
-  		<!-- TODO -->
+  		<spring.version>5.1.13.RELEASE</spring.version>
+  		
   	</properties>
   	
   	<modules></modules>
   	
-  	<dependencyManagement>
-  		<dependencies></dependencies>
-  	</dependencyManagement>
+ 	<dependencies>
+ 		
+		<!-- Spring Framework dependencies -->
+ 		<dependency>
+   			<groupId>org.springframework</groupId>
+   			<artifactId>spring-core</artifactId>
+   			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		
+ 	</dependencies>
   	
   	<build>
   		<pluginManagement>
