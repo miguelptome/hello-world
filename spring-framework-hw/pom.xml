@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+  	
+  	<groupId>pt.mtome</groupId>
+  	<artifactId>spring-framework-hw</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<packaging>jar</packaging>
+  	
+  	<name>Spring Framework HW</name>
+  	<description>Spring Framework - Hello World</description>
+  	
+  	<inceptionYear>2020</inceptionYear>
+  	
+  	<properties>
+  		<project.build.sourceEncoding>ISO-8859-15</project.build.sourceEncoding>
+  		<javac.source.level>1.8</javac.source.level>
+        <javac.target.level>1.8</javac.target.level>
+  	
+  		<!-- Spring Framework properties -->
+  		<!-- TODO -->
+  	</properties>
+  	
+  	<modules></modules>
+  	
+  	<dependencyManagement>
+  		<dependencies></dependencies>
+  	</dependencyManagement>
+  	
+  	<build>
+  		<pluginManagement>
+  			<plugins></plugins>
+  		</pluginManagement>
+  	</build>
+  	
+  	<profiles></profiles>
+</project>
