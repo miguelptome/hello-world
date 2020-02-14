@@ -1,13 +1,13 @@
-package pt.helloworld.springframeworkhwin28minutes;
+package pt.helloworld.springframeworkinitializr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringFrameworkHwIn28minutesApplication {
+public class SpringFrameworkInitializrApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringFrameworkHwIn28minutesApplication.class, args);
+		SpringApplication.run(SpringFrameworkInitializrApplication.class, args);
 	}
 
 }
