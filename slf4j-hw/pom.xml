@@ -16,24 +16,27 @@
   	<inceptionYear>2020</inceptionYear>
   	
   	<properties>
-  	
   		<project.build.sourceEncoding>ISO-8859-15</project.build.sourceEncoding>
   		<javac.source.level>1.8</javac.source.level>
         <javac.target.level>1.8</javac.target.level>
   	
   		<slf4j.version>1.7.30</slf4j.version>
-  	
   	</properties>
   	
   	<modules></modules>
   	
  	<dependencies>
 		<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>${slf4j.version}</version>
-	</dependency>
- 		
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
  	</dependencies>
   	
   	<build>
