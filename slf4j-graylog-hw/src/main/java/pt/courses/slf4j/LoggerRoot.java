@@ -16,7 +16,7 @@ public class LoggerRoot {
 	
 	MDC.put("app", "SLF4J");
 	
-	IntStream.rangeClosed(1, 10).forEach(counter -> {
+	IntStream.rangeClosed(1, 3).forEach(counter -> {
 	    logger.info("Counter:{}", counter);
 	});
 	
