@@ -2,6 +2,7 @@ package pt.courses.slf4j;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 import java.lang.invoke.MethodHandles;
 import java.util.stream.IntStream;
@@ -12,6 +13,8 @@ public class LoggerRoot {
 		.lookupClass().getSimpleName()); // alternative to LoggerRoot.class.getName()
     
     public static void main(String[] args) {
+	
+	MDC.put("app", "SLF4J");
 	
 	IntStream.rangeClosed(1, 10).forEach(counter -> {
 	    logger.info("Counter:" + counter);
