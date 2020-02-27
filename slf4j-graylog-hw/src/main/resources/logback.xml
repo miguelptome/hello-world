@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <configuration>
 
-	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+	<property name="CONSOLE_PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %X{app} %msg%n"/>
+
+	<property name="GRAYLOG_HOST" value="ultvvi01.seg-social.pt"/>
+	<property name="GRAYLOG_GELF_UDP_PORT" value="1515"/>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<target>System.out</target>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %X{app} %msg%n</pattern>
+			<pattern>${CONSOLE_PATTERN}</pattern>
 		</encoder>
 	</appender>
 	
-	<appender name="gelf" class="de.siegmar.logbackgelf.GelfUdpAppender">
-		<graylogHost>ultvvi01.seg-social.pt</graylogHost>
-		<graylogPort>1515</graylogPort>
+	<!-- BASIC GELF APPENDER -->
+	<appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
+		<graylogHost>${GRAYLOG_HOST}</graylogHost>
+		<graylogPort>${GRAYLOG_GELF_UDP_PORT}</graylogPort>
+	</appender>
+	
+	<!-- ADVANCED GELF APPENDER -->
+	<appender name="GELF_ADVANCED" class="de.siegmar.logbackgelf.GelfUdpAppender">
+		<graylogHost>${GRAYLOG_HOST}</graylogHost>
+		<graylogPort>${GRAYLOG_GELF_UDP_PORT}</graylogPort>
+		<maxChunkSize>508</maxChunkSize>
+		<useCompression>true</useCompression>
+		<messageIdSupplier class="de.siegmar.logbackgelf.MessageIdSupplier"/>
+		<encoder class="de.siegmar.logbackgelf.GelfEncoder">
+			<originHost>localhost</originHost>
+			<includeRawMessage>true</includeRawMessage>
+			<includeMarker>true</includeMarker>
+			<includeMdcData>true</includeMdcData>
+			<includeCallerData>true</includeCallerData>
+			<includeRootCauseData>false</includeRootCauseData>
+			<includeLevelName>true</includeLevelName>
+			<shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>%m%nopex</pattern>
+			</shortPatternLayout>
+			<fullPatternLayout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>%m%n</pattern>
+			</fullPatternLayout>
+			<numbersAsString>false</numbersAsString>
+			<staticField>app_name:backend</staticField>
+			<staticField>os_arch:${os.arch}</staticField>
+			<staticField>os_name:${os.name}</staticField>
+			<staticField>os_version:${os.version}</staticField>
+		</encoder>
 	</appender>
 	
 	<root level="info">
-		<appender-ref ref="console"/>
-		<appender-ref ref="gelf"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="GELF_ADVANCED"/>
 	</root>
 </configuration>
