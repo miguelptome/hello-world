@@ -7,6 +7,7 @@ Hello World with slf4j, sending logs to graylog demonstration.
 * java 1.8
 * SLF4J
 * logback
+* GELF via UDP
 
 ## Description
 Uses simple demo, sending logs to graylog.
