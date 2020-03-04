@@ -26,21 +26,27 @@
 		<maxChunkSize>508</maxChunkSize>
 		<useCompression>true</useCompression>
 		<messageIdSupplier class="de.siegmar.logbackgelf.MessageIdSupplier"/>
+		
 		<encoder class="de.siegmar.logbackgelf.GelfEncoder">
-			<originHost>localhost</originHost>
+			
+			<!-- <originHost>localhost</originHost>  -->
+			
 			<includeRawMessage>true</includeRawMessage>
 			<includeMarker>true</includeMarker>
 			<includeMdcData>true</includeMdcData>
 			<includeCallerData>true</includeCallerData>
 			<includeRootCauseData>false</includeRootCauseData>
 			<includeLevelName>true</includeLevelName>
+			
 			<shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
 				<pattern>%m%nopex</pattern>
 			</shortPatternLayout>
 			<fullPatternLayout class="ch.qos.logback.classic.PatternLayout">
 				<pattern>%m%n</pattern>
 			</fullPatternLayout>
+			
 			<numbersAsString>false</numbersAsString>
+			
 			<staticField>app_name:backend</staticField>
 			<staticField>os_arch:${os.arch}</staticField>
 			<staticField>os_name:${os.name}</staticField>
