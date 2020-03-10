@@ -6,12 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class TestPasswordService {
-
-    private static final Logger LOG = LoggerFactory.getLogger(TestPasswordService.class);
     
     PasswordService passwordService;
     
@@ -27,9 +23,6 @@ public class TestPasswordService {
 	"hello world, b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
     })
     void testSha256hex(String input, String expected) {
-	
-	LOG.info("MIG123 " + input);
-	
 	assertEquals(expected, passwordService.hash(input));
     }
 }
