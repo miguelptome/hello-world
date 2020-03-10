@@ -18,6 +18,8 @@
   	
   	<properties>
   		<project.build.sourceEncoding>ISO-8859-15</project.build.sourceEncoding>
+  		<maven.compiler.source>1.8</maven.compiler.source>
+  		<maven.compiler.target>1.8</maven.compiler.target>
   		<javac.source.level>1.8</javac.source.level>
         <javac.target.level>1.8</javac.target.level>
   		<junit.version>5.3.1</junit.version>
@@ -28,7 +30,7 @@
   	
   	<!-- sub modules -->
   	<modules>
-  		<!-- <module>web</module> -->
+  		<module>web</module>
   		<module>password</module>
   		<module>password-sha</module>
   		<module>password-md5</module>
@@ -56,20 +58,7 @@
  			<version>${junit.version}</version>
  			<scope>test</scope>
  		</dependency>
- 	
- 		<!-- logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		
+ 		
  	</dependencies>
   	 
   	<build>
