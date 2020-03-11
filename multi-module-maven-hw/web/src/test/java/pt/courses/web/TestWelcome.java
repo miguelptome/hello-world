@@ -23,12 +23,12 @@ public class TestWelcome {
     @Autowired
     private WebApplicationContext webAppContext;
     
-    @BeforeEach
+//    @BeforeEach
     public void setup() {
 	mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).build();
     }
     
-    @Test
+//    @Test
     public void testDeafult() throws Exception {
 	
 	this.mockMvc.perform(

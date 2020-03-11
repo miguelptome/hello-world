@@ -52,19 +52,6 @@
             <version>${spring.version}</version>
   		</dependency>
   		
-  		<!-- logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		
 		<!-- unit test -->
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -92,7 +79,7 @@
   			<artifactId>thymeleaf-spring5</artifactId>
   			<version>${thymeleaf.version}</version>
   		</dependency>
-  		
+  		 
   	</dependencies>
   	
   	<build>
