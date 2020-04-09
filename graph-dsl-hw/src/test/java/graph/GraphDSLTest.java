@@ -4,6 +4,8 @@ import static pt.courses.graph.dsl.GraphBuilder.*;
 import static pt.courses.graph.dsl.nestedfunction.NestedGraphBuilder.*;
 import static pt.courses.graph.dsl.nestedfunction.NestedEdgeBuilder.*;
 import static pt.courses.graph.dsl.nestedfunction.NestedVertexBuilder.*;
+import static pt.courses.graph.dsl.lambdaexpression.GraphBuilder.*;
+import static pt.courses.graph.dsl.lambdaexpression.EdgeBuilder.*;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -74,5 +76,30 @@ public class GraphDSLTest {
 	);
 	
 	Graph.printGraph(g);
+    }
+    
+    @Test
+    void testInnerDSLUsingLambdaExpression() {
+	LOG.info("Testing Inner DSL using Lambda Expression");
+	
+	Graph g1 = Graph( g -> {
+	    g.edge( e -> {
+		e.from("a");
+		e.to("b");
+		e.weight(40.0);
+	    });
+	    g.edge( e -> {
+		e.from("b");
+		e.to("c");
+		e.weight(20.0);
+	    });
+	    g.edge( e -> {
+		e.from("d");
+		e.to("e");
+		e.weight(50.5);
+	    });
+	});
+	
+	Graph.printGraph(g1);
     }
 }
