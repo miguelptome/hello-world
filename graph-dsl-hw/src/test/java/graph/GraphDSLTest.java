@@ -1,6 +1,9 @@
 package graph;
 
-import static pt.courses.graph.dsl.GraphBuilder.Graph;
+import static pt.courses.graph.dsl.GraphBuilder.*;
+import static pt.courses.graph.dsl.nestedfunction.NestedGraphBuilder.*;
+import static pt.courses.graph.dsl.nestedfunction.NestedEdgeBuilder.*;
+import static pt.courses.graph.dsl.nestedfunction.NestedVertexBuilder.*;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -41,8 +44,8 @@ public class GraphDSLTest {
     }
     
     @Test
-    void testGraphWithDSL() {
-	LOG.info("Testing Graph with DSL");
+    void testInnerDSLByMethodChaining() {
+	LOG.info("Testing Inner DSL by Method Chaining");
 	
 	Graph()
 	    .edge()
@@ -58,5 +61,18 @@ public class GraphDSLTest {
 	    	.to("e")
 	    	.weight(50.5)
 	    .printGraph();
+    }
+    
+    @Test
+    void testInnerDSLByNestedFunctions() {
+	LOG.info("Testing Inner DSL by Nested Functions");
+	
+	Graph g = Graph(
+	    edge(from("a"), to("b"), 40.0),
+	    edge(from("b"), to("c"), 20.0),
+	    edge(from("d"), to("e"), 50.5)
+	);
+	
+	Graph.printGraph(g);
     }
 }
