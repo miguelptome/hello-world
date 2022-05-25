@@ -22,7 +22,7 @@
         <javac.target.level>1.8</javac.target.level>
   	
   		<!-- Spring Framework properties -->
-  		<spring.version>5.1.13.RELEASE</spring.version>
+  		<spring.version>5.2.22.RELEASE</spring.version>
   		
   	</properties>
   	
